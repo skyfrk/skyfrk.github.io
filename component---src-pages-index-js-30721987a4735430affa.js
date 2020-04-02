@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{187:function(e,n,o){"use strict";o.r(n);var t=o(0),a=o.n(t);n.default=function(){return a.a.createElement("div",null,"Welcome to the WIP personal homepage of Simon Eßlinger :)")}}}]);
-//# sourceMappingURL=component---src-pages-index-js-30721987a4735430affa.js.map
