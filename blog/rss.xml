@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[esslinger.dev]]></title><description><![CDATA[The personal internet domicile of Simon Eßlinger]]></description><link>https://esslinger.dev</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 15 Apr 2020 20:58:56 GMT</lastBuildDate><item><title><![CDATA[hunger.stop()]]></title><description><![CDATA[Last weekend (14.-15.2.) I participated in hunger.stop() - the first hackathon of the Welthungerhilfe.
+There were three challenges which the…]]></description><link>https://esslinger.dev/blog/2020/hunger-stop/</link><guid isPermaLink="false">https://esslinger.dev/blog/2020/hunger-stop/</guid><pubDate>Thu, 20 Feb 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Last weekend (14.-15.2.) I participated in &lt;a href=&quot;https://www.welthungerhilfe.de/hackathon/&quot;&gt;hunger.stop()&lt;/a&gt; - the first hackathon of the &lt;a href=&quot;https://www.welthungerhilfe.de/&quot;&gt;Welthungerhilfe&lt;/a&gt;.
+There were three challenges which the participants of the hackathon should develop solutions for:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Donation 5.0&lt;/strong&gt;: How does donating fit into the digital age, which digital donation possibilities should there be?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A future without donations&lt;/strong&gt;. How can we end hunger if no one is donating anymore?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Get Digital&lt;/strong&gt;: How can we improve in connecting people in Germany and Welthungerhilfes project countries? How can we tell their stories?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;The idea&lt;/h2&gt;
+&lt;p&gt;I decided join a group of students who tried to tackle the third challenge by creating a chat app which randomly connects people from the global north with people from the global south to then discuss a random question in order to get to understand each other better.&lt;/p&gt;
+&lt;p&gt;When the hacking time started we created a quick and dirty prototype of our chat app in form of hand drawn screens on a flipchart. After discussing our tech stacks we decided to write the websocket backend in &lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt; and create a mobile-first web app with &lt;a href=&quot;https://nuxtjs.org/&quot;&gt;Nuxt.js&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Time flew from then on and many sugary beverages later we had a fully working prototype and also a name for our app: &lt;strong&gt;Troca&lt;/strong&gt;, which means &lt;em&gt;exchange&lt;/em&gt; in portugese.&lt;/p&gt;
+&lt;h2&gt;Troca&lt;/h2&gt;
+&lt;p&gt;Lets get in touch with our MVP! 😀&lt;/p&gt;
+&lt;p&gt;The landing page explains the basic functionality to the user: The ability to discuss a preselected question with a randomly chosen anonymous person from the other end of the world.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 759px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/699a7b9d57a6fbb00c594c137269f4f3/ef3e1/landing_page.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 177.99999999999997%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Landing page screen&quot;
+        title=&quot;Landing page screen&quot;
+        src=&quot;/static/699a7b9d57a6fbb00c594c137269f4f3/ef3e1/landing_page.png&quot;
+        srcset=&quot;/static/699a7b9d57a6fbb00c594c137269f4f3/772e8/landing_page.png 200w,
+/static/699a7b9d57a6fbb00c594c137269f4f3/e17e5/landing_page.png 400w,
+/static/699a7b9d57a6fbb00c594c137269f4f3/ef3e1/landing_page.png 759w&quot;
+        sizes=&quot;(max-width: 759px) 100vw, 759px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;After clicking on the &lt;em&gt;lets go&lt;/em&gt; button the user gets to pick from a list of preselected questions.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 759px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/bce31cc1c8d5ac9d8e081fe62a17e03f/ef3e1/select_question.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 177.99999999999997%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Select question screen&quot;
+        title=&quot;Select question screen&quot;
+        src=&quot;/static/bce31cc1c8d5ac9d8e081fe62a17e03f/ef3e1/select_question.png&quot;
+        srcset=&quot;/static/bce31cc1c8d5ac9d8e081fe62a17e03f/772e8/select_question.png 200w,
+/static/bce31cc1c8d5ac9d8e081fe62a17e03f/e17e5/select_question.png 400w,
+/static/bce31cc1c8d5ac9d8e081fe62a17e03f/ef3e1/select_question.png 759w&quot;
+        sizes=&quot;(max-width: 759px) 100vw, 759px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;After answering the selected question the user gets a random user name and robot profile picture assigned and has to wait until another user is found who also answered the same question. If the user was matched with another user the can start discussing!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 750px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/eae2e64486c69e92fedaed99d4736e78/1d69c/chat.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 177.99999999999997%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Chat screen&quot;
+        title=&quot;Chat screen&quot;
+        src=&quot;/static/eae2e64486c69e92fedaed99d4736e78/1d69c/chat.png&quot;
+        srcset=&quot;/static/eae2e64486c69e92fedaed99d4736e78/772e8/chat.png 200w,
+/static/eae2e64486c69e92fedaed99d4736e78/e17e5/chat.png 400w,
+/static/eae2e64486c69e92fedaed99d4736e78/1d69c/chat.png 750w&quot;
+        sizes=&quot;(max-width: 750px) 100vw, 750px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Pitch&lt;/h2&gt;
+&lt;p&gt;We also had to create a pitch to present our idea to the other participants. You can still have a look at our pitch &lt;a href=&quot;https://slides.com/skyfrk/troca-pitch/fullscreen#/&quot;&gt;right here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Unfortunately we didn&apos;t win the hackathon with our idea. The lucky winners who created a web app which automatically generates metadata for images and text using machine learning which can then be used inside an &lt;a href=&quot;https://airtable.com/&quot;&gt;Airtable&lt;/a&gt; to search for content for the Welthungerhilfes public relations team won a trip to the next international hackathon of the Welthungerhilfe.&lt;/p&gt;
+&lt;h2&gt;Learnings&lt;/h2&gt;
+&lt;p&gt;Nevertheless we had many lessons learned during the hacking sessions. You should for example avoid under any circumstances implementing a custom in memory database on the fly 🙈. Also communication is key, especially when working on the same git repository with five people. A common vision of the product also helps to avoid confusion and non-productivity.&lt;/p&gt;
+&lt;p&gt;My personal highlight was learning Go for the implementation of the backend, more specifically for implementing the random name generator and random profile image generator. It is fascinating how fast you can get started with Go. One particular good aspect of Go is that there is &lt;a href=&quot;https://golang.org/doc/faq#Is_there_a_Go_programming_style_guide&quot;&gt;a default style-guide&lt;/a&gt; which is basically used by everybody. This way every piece of code you take a look at looks the same and grasping the functionality of it gets way easier.&lt;/p&gt;
+&lt;p&gt;In conclusion it was absolutely worth traveling over 350km to Bonn to get to know the people behind the Welthungerhilfe, fellow hackers and also the city of Bonn. Sign me up for the next edition of the hackathon! 😃&lt;/p&gt;
+&lt;p&gt;If you&apos;re interested in the project you can take a look at the GPL-licensed &lt;a href=&quot;https://github.com/The-Penguin-Circle&quot;&gt;source code on GitHub&lt;/a&gt; or read more about hunger.stop() in &lt;a href=&quot;https://www.general-anzeiger-bonn.de/news/wirtschaft/-48973251&quot;&gt;this local newspaper&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Connecting the digital worlds (3/3)]]></title><description><![CDATA[In the previous article we implemented the flow of events from IFTTT to tapio-ready machines. Now we want to implement forwarding events…]]></description><link>https://esslinger.dev/blog/2019/connecting-the-digital-worlds-3/</link><guid isPermaLink="false">https://esslinger.dev/blog/2019/connecting-the-digital-worlds-3/</guid><pubDate>Tue, 16 Jul 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In the &lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-2&quot;&gt;previous article&lt;/a&gt; we implemented the flow of events from IFTTT to tapio-ready machines. Now we want to implement forwarding events from tapio-ready machines to IFTTT.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-1&quot;&gt;Connecting the digital worlds (1/3)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-2&quot;&gt;Connecting the digital worlds (2/3)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-3&quot;&gt;Connecting the digital worlds (3/3)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c12f4d5be71f671057f1caf1d692af5f/a0730/tapio-ifttt-sequence-from-machine.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 30.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAAsSAAALEgHS3X78AAABV0lEQVQY0yWM3UvCUADF7+xF8bXHCsL/sghCRKbOL+ghqEQD6w/oJQoCSZepFZJsujkxP/BzOtnd1vVu93all8M5nPM7QO99GyNp1BFHcmM9bs2Uz4Vce5Yfz/r5k34+PbxLyfmwkjsdFLLD+6h22+yWl9rHRP2a95pgs5wbi6m5mkNzDU3d0GcU2pd6aX8TO7TSITMdsjJHduaAeZg5NpLllUQtCKFhbnRAkEsp3dpo+4tcZ2ssV9ShKSgCHNmjSUATgCQAFTgqMM/hmIgGbO8SjxICPIRZIB75VxtaDBb0EjDOfSjOobjP5gGOcezCZTEmOj/U28GEwQQhRjFup9RDjs26C+cd4KifpAIkGYR8APJ+LARxMugkqrBHLeRYkGIMZu3aVKlP1cq0U5+o1UHzdSlXX5oPfDsXVm6u1eKVVhS6hYiay2nFrJRvtJ4W6ttYqg6+K3+mwBcABpsi6gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Sequence diagram&quot;
+        title=&quot;Sequence diagram&quot;
+        src=&quot;/static/c12f4d5be71f671057f1caf1d692af5f/5a190/tapio-ifttt-sequence-from-machine.png&quot;
+        srcset=&quot;/static/c12f4d5be71f671057f1caf1d692af5f/772e8/tapio-ifttt-sequence-from-machine.png 200w,
+/static/c12f4d5be71f671057f1caf1d692af5f/e17e5/tapio-ifttt-sequence-from-machine.png 400w,
+/static/c12f4d5be71f671057f1caf1d692af5f/5a190/tapio-ifttt-sequence-from-machine.png 800w,
+/static/c12f4d5be71f671057f1caf1d692af5f/a0730/tapio-ifttt-sequence-from-machine.png 1131w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;First off we need a way to trigger an event on our demo machine. We decided to go with a &lt;a href=&quot;https://www.sunrom.com/p/micro-pir-motion-detection-sensor-am312&quot;&gt;AM312&lt;/a&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/Passive_infrared_sensor&quot;&gt;PIR&lt;/a&gt; motion sensor which can be directly connected to the demo machine through its &lt;a href=&quot;https://www.raspberrypi.org/documentation/usage/gpio/&quot;&gt;GPIO interface&lt;/a&gt;. When properly connected to a ground pin, a voltage pin and a generic GPIO data pin it&apos;ll output a current on the GPIO pin when there is motion in front of it.&lt;/p&gt;
+&lt;p&gt;Now that our sensor is ready we have to monitor it for status changes in order to react to motion events. Microsofts GPIO library &lt;a href=&quot;https://github.com/dotnet/iot&quot;&gt;System.Device.Gpio&lt;/a&gt; provides a method &lt;code class=&quot;language-text&quot;&gt;RegisterCallbackForPinValueChangedEvent&lt;/code&gt; through which one can subscribe to rising or falling currents. Using this method we wrote a little wrapper to simplify things a bit:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;csharp&quot;&gt;&lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;MotionSensorMonitor&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token type-list&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;IMotionSensorMonitor&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; _Pin&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;event&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;EventHandler&lt;/span&gt; OnMotion&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;MotionSensorMonitor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; pinBoardNumber&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        _Pin &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pinBoardNumber&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt;&lt;/span&gt; controller &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;GpioController&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;PinNumberingScheme&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Board&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        controller&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;OpenPin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;_Pin&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        controller&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;SetPinMode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;_Pin&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; PinMode&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Input&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        controller&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;RegisterCallbackForPinValueChangedEvent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;_Pin&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; PinEventTypes&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Rising&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sender&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            OnMotion&lt;span class=&quot;token punctuation&quot;&gt;?.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Invoke&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;EventArgs&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now that we&apos;re able to react to status changes we want them reflected in the OPC UA server of our demo machine so that these changes can get forwarded to tapio through the CloudConnector also running on our demo machine. So we have to a add a node to our OPC UA servers address space:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;csharp&quot;&gt;&lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;CreateAddressSpace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;CreateAddressSpace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    _MotionSensorState &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;DataVariableState&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;MotionSensorState&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; RootFolder&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; SystemContextObject&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token function&quot;&gt;AddNode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;_MotionSensorState&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then we have to add a method to our node manager which updates our &lt;code class=&quot;language-text&quot;&gt;MotionSensorState&lt;/code&gt; node when called:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;csharp&quot;&gt;&lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;OnMotionDetected&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;_MotionSensorState &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;InvalidOperationException&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Please create the base event state first&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    _MotionSensorState&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;StatusChanged&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;motiondetected&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; StatusCodes&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Good&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Finally we have to hook up the motion sensor monitor with our event handler method:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;csharp&quot;&gt;&lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt;&lt;/span&gt; led &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;Led&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt;&lt;/span&gt; ledController &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;LedController&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;led&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt;&lt;/span&gt; motionSensorMonitor &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;MotionSensorMonitor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt;&lt;/span&gt; nodeManager &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;NodeManager&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;ledController&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; motionSensorMonitor&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt;&lt;/span&gt; server &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;Server&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nodeManager&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    motionSensorMonitor&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;OnMotion &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; nodeManager&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;OnMotionDetected&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now we&apos;re able to reflect motions in front of our PIR motion sensor to OPC UA node status changes. CloudConnector can forward these status changes to tapio if we configure the data module of the CloudConnector &lt;a href=&quot;https://developer.tapio.one/docs/CloudConnector/DataModule.html#sourcedataitem&quot;&gt;correctly&lt;/a&gt;. Keep the configured &lt;code class=&quot;language-text&quot;&gt;SrcKey&lt;/code&gt; in mind.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;...
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;SourceItem&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;xsi:&lt;/span&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;SourceDataItem&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;NodeId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;ns=2;s=PiSensorServer.MotionSensorState&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;NodeId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;SrcKey&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;MotionSensorState&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;SrcKey&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;SourceItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As tapio &lt;a href=&quot;https://developer.tapio.one/docs/TapioDataCategories.html#streaming-data&quot;&gt;supports&lt;/a&gt; streaming this data into an &lt;a href=&quot;https://azure.microsoft.com/en-in/services/event-hubs/&quot;&gt;Azure Event Hub&lt;/a&gt; we deployed us one through the &lt;a href=&quot;http://portal.azure.com/&quot;&gt;Azure Portal&lt;/a&gt; and configured an app in &lt;a href=&quot;https://my.tapio.one/&quot;&gt;my tapio&lt;/a&gt; to forward the data to our event hub.&lt;/p&gt;
+&lt;p&gt;Data ingested into an Azure Event Hub can easily be processed, stored or served for third party apps. As we only want to process and forward events as they come in we opted for a serverless approach &lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-2&quot;&gt;again&lt;/a&gt; with another Azure Function hooked up to our event hub.&lt;/p&gt;
+&lt;p&gt;Below we can see how an event message ingested into our event hub looks like:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;tmid&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;741ab3a2-040a-44bf-b8ce-4333d567a99a&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// machine id&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;msgid&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;bf8610fa-a5e9-4ede-ad37-51082e7eb372&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// message id&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;msgt&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;itd&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// message type&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;msgts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;2017-06-29T10:39:03.7651013+01:00&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// ISO8601 timestamp&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;msg&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;p&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;pi&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// provider name&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;k&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;MotionSensorState&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// key, usually the node id&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;vt&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;s&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// data value type (string)&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;v&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;motiondetected&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// payload&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;q&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;g&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// quality of the value (OPC UA thing)&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;sts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;2017-06-29T10:38:43.7606016+01:00&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// ISO8601 timestamp by OPC UA server&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;rts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;2017-06-29T10:38:53.7606016+01:00&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// ISO8601 timestamp by CloudConnector&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.tapio.one/docs/TapioDataCategories.html#streaming-data&quot;&gt;Streaming data&lt;/a&gt; messages from tapio received by our event hub can have different structures. We&apos;re only interested into &lt;a href=&quot;https://developer.tapio.one/docs/TapioDataCategories.html#item-data&quot;&gt;item data&lt;/a&gt; messages because we just want to monitor status changes of our PIR motion sensor monitor node. We can recognize an item data message if we take a look at the &lt;code class=&quot;language-text&quot;&gt;msgt&lt;/code&gt; (message type) key. Every item data message has the type &lt;code class=&quot;language-text&quot;&gt;itd&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The property &lt;code class=&quot;language-text&quot;&gt;msg&lt;/code&gt; stores the actual item data message as JSON object. Here we&apos;re looking for messages with their &lt;code class=&quot;language-text&quot;&gt;k&lt;/code&gt; (key) being the previously configured &lt;code class=&quot;language-text&quot;&gt;SrcKey&lt;/code&gt;. The value we&apos;re forwarding hides behind the &lt;code class=&quot;language-text&quot;&gt;v&lt;/code&gt; key. Once again to keep things simple this is only a string (&lt;code class=&quot;language-text&quot;&gt;motiondetected&lt;/code&gt;) but it could be any complex event object when serialized as JSON object for example.&lt;/p&gt;
+&lt;p&gt;Below we can see a simplified version of our event hub processor Azure Function:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;csharp&quot;&gt;&lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token attribute&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;FunctionName&lt;/span&gt;&lt;span class=&quot;token attribute-arguments&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;EventHubProcessorFunction&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token attribute&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;IoTHubTrigger&lt;/span&gt;&lt;span class=&quot;token attribute-arguments&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;ifttt&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Connection &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;EventHubConnection&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;EventData&lt;/span&gt; message&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Microsoft&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Azure&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;WebJobs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ExecutionContext&lt;/span&gt; context&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token class-name&quot;&gt;CancellationToken&lt;/span&gt; cancellationToken&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt;&lt;/span&gt; streamingDataMessage &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; JsonConvert&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token generic-method&quot;&gt;&lt;span class=&quot;token function&quot;&gt;DeserializeObject&lt;/span&gt;&lt;span class=&quot;token generic class-name&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;StreamingDataMessage&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Encoding&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;UTF8&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;GetString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;message&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Body&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Array&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;streamingDataMessage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;MessageType &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;itd&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt;&lt;/span&gt; itemDataMessage &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; JsonConvert&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token generic-method&quot;&gt;&lt;span class=&quot;token function&quot;&gt;DeserializeObject&lt;/span&gt;&lt;span class=&quot;token generic class-name&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ItemDataMessage&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;streamingDataMessage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Message&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;itemDataMessage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;SrcKey &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;MotionSensorState&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;SendEventToIFTTT&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;itemDataMessage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In similar fashion to our &lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-2&quot;&gt;other Azure Function&lt;/a&gt; we&apos;re simply consuming messages from our event hub and then forward them to IFTTT. The &lt;code class=&quot;language-text&quot;&gt;SendEventToIFTTT&lt;/code&gt; method wraps a simple HTTP request towards the IFTTT Webhook service:&lt;/p&gt;
+&lt;p&gt;POST &lt;code class=&quot;language-text&quot;&gt;https://maker.ifttt.com/trigger/&amp;lt;name of the event&amp;gt;/with/key/&amp;lt;your accounts webhook service key&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The Webhook service key can be obtained &lt;a href=&quot;https://ifttt.com/maker_webhooks&quot;&gt;here&lt;/a&gt; (if you&apos;re logged in). The Webhook service is also able to interpret an &lt;code class=&quot;language-text&quot;&gt;application/json&lt;/code&gt; body if it has the structure below:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;value1&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;some string&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;value2&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;#MWIGA&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;value3&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;hello world&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Taking advantage of the body structure one could transmit any kind of event data to IFTTT. Finally we have to configure an applet in IFTTT to test our implementation. We combined &lt;a href=&quot;https://ifttt.com/services/google_sheets&quot;&gt;Google Sheets&lt;/a&gt; with the Webhook service for example:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5a1bf19e8e4c7fbabb54389720cc49b9/97655/receiving-applet-config.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 446%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Receiving applet config&quot;
+        title=&quot;Receiving applet config&quot;
+        src=&quot;/static/5a1bf19e8e4c7fbabb54389720cc49b9/5a190/receiving-applet-config.png&quot;
+        srcset=&quot;/static/5a1bf19e8e4c7fbabb54389720cc49b9/772e8/receiving-applet-config.png 200w,
+/static/5a1bf19e8e4c7fbabb54389720cc49b9/e17e5/receiving-applet-config.png 400w,
+/static/5a1bf19e8e4c7fbabb54389720cc49b9/5a190/receiving-applet-config.png 800w,
+/static/5a1bf19e8e4c7fbabb54389720cc49b9/97655/receiving-applet-config.png 819w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;That&apos;s it! Two Azure Functions, an Event Hub, a Raspberry Pi and three workdays later we were able to present a functioning prototype. For our demo on day four we logged motion sensor data through our tapio-IFTTT-Connector into a Google Drive sheet, turned on a RGB LED with the press of a widget button on a smartphone and configured a new IFTTT-Applet live. We didn&apos;t develop a shippable product but built a working proof of concept in the tapio ecosystem which can be transformed into a proper solution. Authentication, authorization and a web interface for configuring events are mandatory for a feature complete solution and our code base also lacks a huge refactoring... :D&lt;/p&gt;
+&lt;p&gt;But aside from resolving the actual challenges &lt;a href=&quot;https://www.tapio.one/en/blog/hack-the-wood-2019&quot;&gt;#hackthewood2019&lt;/a&gt; was most notably a fun event with awesome attendees who helped each other out at any time and had a great time together in Berlin!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Connecting the digital worlds (2/3)]]></title><description><![CDATA[In the previous article we clarified the idea of the challenge and set up a demo machine. In this article we take on the implementation of…]]></description><link>https://esslinger.dev/blog/2019/connecting-the-digital-worlds-2/</link><guid isPermaLink="false">https://esslinger.dev/blog/2019/connecting-the-digital-worlds-2/</guid><pubDate>Tue, 09 Jul 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In the &lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-1&quot;&gt;previous article&lt;/a&gt; we clarified the idea of the challenge and set up a demo machine. In this article we take on the implementation of the first route of events in the tapio-IFTTT-Connector: From IFTTT to tapio-ready machines.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-1&quot;&gt;Connecting the digital worlds (1/3)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-2&quot;&gt;Connecting the digital worlds (2/3)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-3&quot;&gt;Connecting the digital worlds (3/3)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fa1779f94a1cedc853c50e98b887e823/a0730/tapio-ifttt-sequence-from-ifttt.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 27.500000000000004%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAAsSAAALEgHS3X78AAABbklEQVQY0yXMzS/DYADH8SfGxcEc/AcSLhIHDo4Sd/+Ei4OLg4MLDtti1U1SV2IRsgiZhUWCEKfOBDEvWVtvsbaq22xPX7TV53n6qPjmd/38QEupfDxfvt1ftJTHr+qdXrmRhWJGzM1W1+ffN9JKNi1k4uL6jJzh1O2YurkjHRjVe+Xlqv5SBhas2VB3jIYFdaOuGprqwNrE52avwQ5Y3BDkhiE3aHL9xvJIc6WvzszJOaR/1pRXqKuAhgX0P4IIdn/Itz+qrwJrIWLGgZsAKAlwEgRM+w8D7LnJxh71KCIkVH84QNh1nAATp2XajSZ10ZixAfxYxF8CiAF4CQTh2A7MAhqfco8oojikIXZM6NuGa0Lk2uF8y6S+N25vtZHFaJCOklQ3TnWRVCdhe9AyIIlpqxC++8TDvgfUx5ImFTXxWnsqqRVeKfOKwJ/eFraE3ayYOxH3j6WDvJhfE3bOpEJBzJ+XD1WB154u5YfiL25uE5d+nBt+AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Sequence diagram&quot;
+        title=&quot;Sequence diagram&quot;
+        src=&quot;/static/fa1779f94a1cedc853c50e98b887e823/5a190/tapio-ifttt-sequence-from-ifttt.png&quot;
+        srcset=&quot;/static/fa1779f94a1cedc853c50e98b887e823/772e8/tapio-ifttt-sequence-from-ifttt.png 200w,
+/static/fa1779f94a1cedc853c50e98b887e823/e17e5/tapio-ifttt-sequence-from-ifttt.png 400w,
+/static/fa1779f94a1cedc853c50e98b887e823/5a190/tapio-ifttt-sequence-from-ifttt.png 800w,
+/static/fa1779f94a1cedc853c50e98b887e823/a0730/tapio-ifttt-sequence-from-ifttt.png 1131w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;As &lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-1&quot;&gt;previously specified&lt;/a&gt; we want to use the IFTTT Webhook service so that when an applet using the Webhook service is triggered we will receive a HTTP request at the endpoint specified in the applet. We then want to process the request and forward the event to the machine using &lt;a href=&quot;https://developer.tapio.one/docs/Commanding.html&quot;&gt;tapios Commanding API&lt;/a&gt;. The Commanding API is typically used to interact with &lt;a href=&quot;https://opcfoundation.org/about/opc-technologies/opc-ua/&quot;&gt;OPC UA&lt;/a&gt; servers running on tapio-ready machines.&lt;/p&gt;
+&lt;p&gt;When we recognized that our tapio-IFTTT-Connector simply has to receive a HTTP request, then process it and finally make another HTTP request we opted for a &lt;a href=&quot;https://martinfowler.com/articles/serverless.html&quot;&gt;serverless&lt;/a&gt; implementation approach. As you can tell by its name there are no servers in a serverless architecture but rather snippets of code which execute on certain conditions. Of course these snippets still run on a server but not on our servers. This way we can safe money because we don&apos;t have to operate or rent a server 24/7 and in addition we don&apos;t have to worry about setting up a server, installing a runtime environment etc. There are multiple products available for implementing serverless architectures. We picked &lt;a href=&quot;https://azure.microsoft.com/en-us/services/functions/&quot;&gt;Azure Functions&lt;/a&gt; from Microsofts cloud platform Azure.&lt;/p&gt;
+&lt;p&gt;When we started coding the desire for proper debugging arised rather quickly. So how does one debug an Azure Function? We can&apos;t simply establish a debugging session to our deployed function. Instead we have to run the Azure Function locally and forward the HTTP requests from IFTTT to our local machine and this is where &lt;a href=&quot;https://ngrok.com/&quot;&gt;ngrok&lt;/a&gt; came in handy.&lt;/p&gt;
+&lt;p&gt;With &lt;a href=&quot;https://ngrok.com/&quot;&gt;ngrok&lt;/a&gt; we&apos;re able to expose a local server behind a NAT or firewall to the internet and therefore IFTTT and it&apos;s dead simple:&lt;/p&gt;
+&lt;p&gt;We only have to register on &lt;a href=&quot;https://ngrok.com/&quot;&gt;ngrok.com&lt;/a&gt;, download the executable and create ourselves an authentication token (replace &lt;code class=&quot;language-text&quot;&gt;some_token&lt;/code&gt; with the key provided for our account on &lt;a href=&quot;https://ngrok.com/&quot;&gt;ngrok.com&lt;/a&gt;).&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:\Program Files\ngrok&gt; &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;ngrok authtoken some_token
+Authtoken saved to configuration file: C:\Users\Simon&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ngrok2&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;ngrok&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;yml&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now we&apos;re already able to expose a local port. In the example below we&apos;re exposing the local port our Azure Function is using:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:\Program Files\ngrok&gt; &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;ngrok http 1337&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After running the above we&apos;re given a monitor screen in our terminal. Behind the &lt;code class=&quot;language-text&quot;&gt;Forwarding&lt;/code&gt; keyword we can see active tunnels. In our example below our local Azure Function is now exposed behind &lt;code class=&quot;language-text&quot;&gt;http://qyt7q40w03.ngrok.io&lt;/code&gt;. We can verify if everything is working correctly by opening the ngrok URL in our web browser (sending a GET request). As we can see at the bottom of the output a GET request was logged as expected. It works! If you&apos;d like to have a deeper look in incoming requests you can explore ngroks web interface running locally on port &lt;code class=&quot;language-text&quot;&gt;4040&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;ngrok by @inconshreveable                               &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Ctrl+C to quit&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+Session Status      online
+Account             &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Plan: Free&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+Version             &lt;span class=&quot;token number&quot;&gt;2.3&lt;/span&gt;.30
+Region              United States &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;us&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+Web Interface       http://127.0.0.1:4040
+Forwarding          http://qyt7q40w03.ngrok.io -&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; http://localhost:1337
+Forwarding          https://qyt7q40w03.ngrok.io -&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; http://localhost:1337
+
+Connections         ttl     opn     rt1     rt5     p50     p90
+                    &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;       &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;       &lt;span class=&quot;token number&quot;&gt;0.01&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;0.01&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;2.31&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;2.31&lt;/span&gt;
+
+HTTP Requests
+-------------
+
+GET /WebhookProcessorFunction               &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt; OK&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To actually develop and debug with real HTTP requests from IFTTT we have to create an applet with a trigger under our control and an action which sends HTTP requests to our local Azure Function exposed through ngrok. Therefore we create an applet which sends a POST request into our ngrok tunnel when we press a button on our smartphone:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7b415d33603fc1126000e3882ac40458/2a50c/applet-config.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 112.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAAC4jAAAuIwF4pT92AAAEqUlEQVQ4y1VVWUycVRT+Z1hm2JGlhRZaoBVbEKttbY3bgzExaVL1UYxv+uK7D4WyllqoUBLDTplhRwYKVZNqTTRqbGLLMkCBQisqwR+XMMUlgWJn7vk85/7D4iRfzv/P3Pvd73znnDuGvRWB+HYgygUKuwxEu4FIFxDRpiM5ORrNIFsLFjkGjBZ+bwHxM4LP+ndZ/0g7f+/kzac+Az37MZDRCzz/CZA7AJwYBl74FJTdzxuaNOGy0QiV/xVw8ipvbABsm4RNQGIH6OBH/BzSCkpnovQeUFqPRSoQosf6QXu6gdBWTWDu64W64AUKboHCL2tl2FLMpHwgGZKmKBIcGQTyOCZ16BOxuwvEQEgr8QYy49qhZN0hDxELYULaTFlHrdjBufPJ+sUCWQv0YtlICBPCRphJnaROfQ48MchKGmk75Z1+ikLJXfAop5nDCnI8hH19QAIrNFgJryEmN3mDOtz3L3I9iqSQ/B24qLC30LYQ9gd72bv9TJDB2N9LiOBCvfPlA1R89ycVfbOKN65vaA+dbaT2diu2hLRCo57BxTHqFfun9AGGnWUmdwLsD5I4xreTmIuTA+t4dchHrw358Mzghphusg1KDn16mOjJq+z3FeCwR+Eox8xeq9pGKKcs1Y1xB71otlIQUl01UdAgkczsflKrG+APkbm0hPW1v+UFI3814+LCi8gbZJVSfjYZh/p1czNIN3aMmxDtIkrsIOzqpK22GV8BltdAYz/7MLeyht/XgWu/DqFg+m1kBftQ2gNZfRZhpGuTWE8LSfukdMtkcFEaAsrWFECcy0+JYo8c2vYQKbwmTiaqQVlFEV92dW31nvZU/JQ+jGHFdqly7aoZUjyhos/PIqpilsLKpuE4N4PIilkYRZMML2wlUzCkl2QOQ3X5g8Zuw6qmTMolnxlS8L1KrZxEWuUExZaNI7JkDFGlY7AXjsAoCEL6MMdj9V/e4P/TlstBeylDX+MzHUUjKqtmBpnVtym1cgrhxeN4/MNZPNc8j6fq7yCqzGulLPPKc6tNFTKZHrllpKGlKGl9FmFo4S2VcH5SiMgoGIUgtGgMkaVeOEvGYSscs4oihOJb9I6CBEFSdYfbStl25qYKL/YiomScGBI1kXFm1IIcIoTS1LoHm4IzvBmbiXQUD6tXzKRzY+r1nh9xuusHeqntLl5x38NRTlUTiTqBpHeEOz2120rXqS9WknRlTvXl4HBZKUcVj6gU9k48TLs4hQM104gr91rqNOGo5aFcDFIYaZkE9kymJrNXySVBuXxRHPCIQp8ZwUXZfWEKBy9NU8YHt5FWNWWlvFOhEKb3kPYwuZM0oVHHl8MX/6DuxjI13VjCu1/zLFfdN5PKR1V27QxXdoaOcap7WG2QiLYi9yFZ/yFk3dy91mwL4t2KRy6w2Ye/OM6OPIwtnwhwe/hjywUTflboZ4XbkPvMqCN6+Rrw02/3cXNmAaPzi7izsIjri379x8WEylbr+8MomYZRNs+Ys1A6B+f7d5FYvYDkmgXEVt3Tk+KXCnPL0PEhwvEhhWOME8OKLwxd5YDBXWBveDBgf+/b08ZZ71vcb/k7wanmhxWNv8lq8/8Dn0O3nYQfKB0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Applet config&quot;
+        title=&quot;Applet config&quot;
+        src=&quot;/static/7b415d33603fc1126000e3882ac40458/5a190/applet-config.png&quot;
+        srcset=&quot;/static/7b415d33603fc1126000e3882ac40458/772e8/applet-config.png 200w,
+/static/7b415d33603fc1126000e3882ac40458/e17e5/applet-config.png 400w,
+/static/7b415d33603fc1126000e3882ac40458/5a190/applet-config.png 800w,
+/static/7b415d33603fc1126000e3882ac40458/2a50c/applet-config.png 925w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Due to our limited time frame we opted for a plain text body with a simple event name to lower complexity. Further down the line one could however transmit full blown JSON objects.&lt;/p&gt;
+&lt;p&gt;Now for the good stuff: The implementation of the Azure Function. The code below basically waits for GET or POST requests, parses the body of the request, interprets it as event and then forwards it to our machine using the Commanding API.&lt;/p&gt;
+&lt;p&gt;The Commanding API is normally used to alter item values or call methods on a OPC UA server associated with the CloudConnector but we figured we can use an item write request as well to transmit an event. On OPC UA server side we then just have to wait for item state changes and interpret them as events.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;csharp&quot;&gt;&lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token attribute&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;FunctionName&lt;/span&gt;&lt;span class=&quot;token attribute-arguments&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;WebhookProcessorFunction&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;Task&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;IActionResult&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token attribute&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;HttpTrigger&lt;/span&gt;&lt;span class=&quot;token attribute-arguments&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;AuthorizationLevel&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Function&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;get&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;post&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Route &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;HttpRequest&lt;/span&gt; req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Microsoft&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Azure&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;WebJobs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ExecutionContext&lt;/span&gt; context&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;CancellationToken&lt;/span&gt; cancellationToken&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt;&lt;/span&gt; eventName &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;StreamReader&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;req&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Body&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;ReadToEndAsync&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt;&lt;/span&gt; processedEvent &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; JsonConvert&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;SerializeObject&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;EventFactory&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;eventName&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;CallCommandAsync&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;Command&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        CommandType &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;itemWrite&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        Id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ProcessEvent&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        ServerId &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Config&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;ServerId&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        TapioMachineId &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Config&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;TapioMachineId&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        Arguments &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;Dictionary&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; CommandArgument&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;CommandArgument&lt;/span&gt;
+                &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                 Value &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; processedEvent &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ValueType &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;String&quot;&lt;/span&gt;
+                &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; cancellationToken&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;OkObjectResult&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;The command was processed successfully&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The &lt;code class=&quot;language-text&quot;&gt;EventFactory&lt;/code&gt; class is responsible for mapping event data from IFTTT to our generic event model:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;csharp&quot;&gt;&lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Event&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token attribute&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;JsonProperty&lt;/span&gt;&lt;span class=&quot;token attribute-arguments&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;string&lt;/span&gt;&lt;/span&gt; Name &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token attribute&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;JsonProperty&lt;/span&gt;&lt;span class=&quot;token attribute-arguments&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;payload&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;string&lt;/span&gt;&lt;/span&gt; Payload &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Due to time constraints we didn&apos;t finish the implementation of the support for events with payload. However being able to transmit any payload would for example enable an IFTTT user to transmit complex statements like &lt;a href=&quot;https://www.youtube.com/watch?v=lx_vWkv50uk&quot;&gt;these :)&lt;/a&gt; to his machine.&lt;/p&gt;
+&lt;p&gt;If we tried to test our system at this point events wouldn&apos;t reach their target machine because we didn&apos;t modify the tapio CloudConnector XML configuration of the machine yet. By default we can&apos;t access any OPC UA node through Commanding API for security reasons until we configure the access in the configuration file.&lt;/p&gt;
+&lt;p&gt;In the example below we extend the configuration of &lt;code class=&quot;language-text&quot;&gt;DataModule01&lt;/code&gt; with our OPC UA event processor server &lt;code class=&quot;language-text&quot;&gt;SensorServer&lt;/code&gt; which has an item write command configured: &lt;code class=&quot;language-text&quot;&gt;ProcessEvent&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;...
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Module&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;xsi:&lt;/span&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;DataModuleConfig&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;DataModule01&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Source&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Servers&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+          ...
+          &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;SourceBase&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;xsi:&lt;/span&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;SourceOpcUa&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;SensorServer&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;OpcServer&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;opc.tcp://localhost:420&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;OpcUaServer&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Commanding&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+              &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Commands&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+                  ...
+                  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Command&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;xsi:&lt;/span&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;CommandItemWrite&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+                    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;ProcessEvent&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+                    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;TapioMachineId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;741ab3a2-040a-44bf-b8ce-4333d567a99a&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;TapioMachineId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+                    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;NodeId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;ns=2;s=PiSensorServer.ProcessEventCommandState&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;NodeId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+                  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Command&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+                  ...
+                &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Commands&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Commanding&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Groups&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;SourceBase&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+          ...
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Servers&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Source&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Module&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now we&apos;re almost good to go. Events will now be forwarded to the OPC UA server running on our demo machine. But this server still lacks the configured node and the logic behind it.&lt;/p&gt;
+&lt;p&gt;So lets add a &lt;code class=&quot;language-text&quot;&gt;DataVariableState&lt;/code&gt; node of type &lt;code class=&quot;language-text&quot;&gt;String&lt;/code&gt; to the address space of our OPC UA server. To also be able to process incoming events we have to be able to react to every single status change. We implemented that by attaching a custom event handler to the &lt;code class=&quot;language-text&quot;&gt;WriteCalled&lt;/code&gt; event of our node:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;csharp&quot;&gt;&lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;CreateAddressSpace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;CreateAddressSpace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    _ProcessEventCommandDataVariableState &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;DataVariableState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ProcessEventCommandState&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; RootFolder&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; SystemContextObject&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token type-expression class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;string&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    _ProcessEventCommandDataVariableState&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;WriteCalled &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; OnProcessEventCommandWrite&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token function&quot;&gt;AddNode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;_ProcessEventCommandDataVariableState&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In order to physically show that our demo machine has received an event we want to flash the LED attached to our demo machine in different ways. Therefore we have to implement an abstraction layer to control the LED connected through the GPIO interface of our demo machine.&lt;/p&gt;
+&lt;p&gt;So we have to define an interface for a LED to abstract the GPIO logic and create another one for a LED controller which is additionally capable of processing light sequences:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;csharp&quot;&gt;&lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ILedController&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token return-type class-name&quot;&gt;Task&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;ProcessSequence&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;LedSequence&lt;/span&gt; ledSequence&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;SetColor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; red&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; green&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; blue&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ILed&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;SetColor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; red&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; green&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; blue&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now we have to implement the LED interface using the &lt;a href=&quot;https://github.com/unosquare/raspberryio&quot;&gt;Unosquare.RaspberryIO&lt;/a&gt; NuGet package:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;csharp&quot;&gt;&lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Led&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token type-list&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;ILed&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; _MaxColorValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GpioPin&lt;/span&gt; _RedPin&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GpioPin&lt;/span&gt; _BluePin&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GpioPin&lt;/span&gt; _GreenPin&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Led&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; redBcm&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; greenBcm&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; blueBcm&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        Pi&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token generic-method&quot;&gt;&lt;span class=&quot;token function&quot;&gt;Init&lt;/span&gt;&lt;span class=&quot;token generic class-name&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;BootstrapWiringPi&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        _RedPin &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;InitializeGpioPin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;redBcm&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        _GreenPin &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;InitializeGpioPin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;greenBcm&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        _BluePin &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;InitializeGpioPin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;blueBcm&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;SetColor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; red&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; green&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; blue&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;CheckColorRange&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;red&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;nameof&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;red&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;CheckColorRange&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;green&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;nameof&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;green&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;CheckColorRange&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;blue&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;nameof&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;blue&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        _RedPin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;SoftPwmValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; red &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; _MaxColorValue &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        _GreenPin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;SoftPwmValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; green &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; _MaxColorValue &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        _BluePin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;SoftPwmValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; blue &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; _MaxColorValue &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;GpioPin&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;InitializeGpioPin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; bcm&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt;&lt;/span&gt; pin &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;GpioPin&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;Pi&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Gpio&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;bcm&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        pin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;PinMode &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; GpioPinDriveMode&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Output&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        pin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;StartSoftPwm&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; _MaxColorValue&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        pin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;SoftPwmValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; pin&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;CheckColorRange&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; color&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;string&lt;/span&gt;&lt;/span&gt; paramName&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;color &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; color &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; _MaxColorValue&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;ArgumentException&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token interpolation-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;$&quot;Color value (&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token expression language-csharp&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;) out of accepted range (0..&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token expression language-csharp&quot;&gt;_MaxColorValue&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;).&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; paramName&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now we&apos;re finally able to process events in our event handler by interpreting the new value of the node as event and acting differently based on the name of the event. This part would naturally be fully dynamic and the sequence processor would work in a proper version of the tapio-IFTTT-Connector which wasn&apos;t implemented in two days.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;csharp&quot;&gt;&lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;OnProcessEventCommandWrite&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;object&lt;/span&gt;&lt;/span&gt; sender&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ValueWriteEventArgs&lt;/span&gt; e&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    Console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token interpolation-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;$&quot;Command received with arg: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token expression language-csharp&quot;&gt;e&lt;span class=&quot;token punctuation&quot;&gt;?.&lt;/span&gt;Value&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt;&lt;/span&gt; eventData &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; JsonConvert&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token generic-method&quot;&gt;&lt;span class=&quot;token function&quot;&gt;DeserializeObject&lt;/span&gt;&lt;span class=&quot;token generic class-name&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Event&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;e&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Value&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;ToString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;eventData&lt;span class=&quot;token punctuation&quot;&gt;?.&lt;/span&gt;Name&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;light_on&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+                _LedController&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;SetColor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;light_off&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+                _LedController&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;SetColor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;token comment&quot;&gt;// case &quot;light_sequence&quot;:&lt;/span&gt;
+            &lt;span class=&quot;token comment&quot;&gt;//     _LedController.ProcessSequence(JsonConvert.DeserializeObject&amp;lt;LedSequence&gt;(eventData?.Payload));&lt;/span&gt;
+            &lt;span class=&quot;token comment&quot;&gt;//     break;&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+                Console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Could not detect event type. Ignoring event.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        Console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Processing event failed. Ignoring event.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We&apos;re done!&lt;/p&gt;
+&lt;p&gt;We&apos;re now able to process events coming from IFTTT using just one Azure Function and a OPC UA server! In the &lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-3&quot;&gt;next article&lt;/a&gt; in this series we&apos;re looking at the implementation of the reversed route: Forwarding events from a tapio-ready machine to IFTTT.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Connecting the digital worlds (1/3)]]></title><description><![CDATA[Hello world! As a dual student at HOMAG I took my chance to represent the HOMAG Digital Factory at #hackthewood2019 in Berlin. In this…]]></description><link>https://esslinger.dev/blog/2019/connecting-the-digital-worlds-1/</link><guid isPermaLink="false">https://esslinger.dev/blog/2019/connecting-the-digital-worlds-1/</guid><pubDate>Tue, 02 Jul 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Hello world! As a dual student at HOMAG I took my chance to represent the HOMAG Digital Factory at &lt;a href=&quot;https://www.tapio.one/en/blog/hack-the-wood-2019&quot;&gt;#hackthewood2019&lt;/a&gt; in Berlin. In this article series I want to show in three steps how we built an idea into a working prototype in less than four days:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-1&quot;&gt;Connecting the digital worlds (1/3)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-2&quot;&gt;Connecting the digital worlds (2/3)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-3&quot;&gt;Connecting the digital worlds (3/3)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;The idea&lt;/h2&gt;
+&lt;p&gt;The challenge I was responsible for - connecting the digital worlds - consisted of the implementation of a rather simple idea: Connecting the tapio ecosystem with &lt;a href=&quot;https://ifttt.com/&quot;&gt;IFTTT&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;IFTTT or &quot;&lt;strong&gt;IF T&lt;/strong&gt;his &lt;strong&gt;T&lt;/strong&gt;hen &lt;strong&gt;T&lt;/strong&gt;hat&quot; is an Internet of Things and automation platform which can be used by anyone even without technical knowledge. As the name suggests it&apos;s all about very simple automations which you can click together in their website or mobile app like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IF&lt;/strong&gt; I like a music video on YouTube &lt;strong&gt;THEN&lt;/strong&gt; add it to my Spotify library.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IF&lt;/strong&gt; my vacuum cleaner robot is stuck somewhere &lt;strong&gt;THEN&lt;/strong&gt; send me a push notification to my smartphone.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If the tapio ecosystem was connected with IFTTT a carpenter could setup individual automations on his own like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IF&lt;/strong&gt; my CNC machine set off an alarm &lt;strong&gt;THEN&lt;/strong&gt; turn on pulsing Philips Hue lights so that a nearby employee is informed and can investigate the issue.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IF&lt;/strong&gt; I tell Amazon Alexa to turn on my edge banding machine &lt;strong&gt;THEN&lt;/strong&gt; my edge banding machine starts up.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;How does IFTTT work?&lt;/h3&gt;
+&lt;p&gt;At IFTTT things are simple, which is great because it enables everyone to use the platform.&lt;/p&gt;
+&lt;p&gt;An IFTTT-Service can be any kind of digital platform like YouTube, iRobot, Wordpress or tapio. However after a successful integration into IFTTT every service only consists of a brand, triggers and actions anymore.&lt;/p&gt;
+&lt;p&gt;An IFTTT-Trigger can be used to listen for an event to occur in its origin service. For example the BMW Labs service provides among others following trigger:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 520px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4e5bd20781707a76b95f3734efdac631/69902/trigger-example.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.49999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA4mAAAN/wHwU+XzAAABU0lEQVQoz5VSwXKCQAz1/3+rHsqMl+pBLOwuLCAr4Emdosi+JlE6g5WxzUwIZEP2vZfM+r7/ws08nhidw3v/yv0QZ/zTcrn0QfCOt/kci8WCvj8QBAF2u+p205Mmj/kB0Mz3vS/LEkWR+zzPoZRCmqawNsXxdMIfbYywrmtCswM3tFmOuqqQFwXlHH1nyChHFyKjc+ccvRfkW4nGGDRN84NYGhZUGEURNpsNwvUaRiskhFJTMSMNKb+mPOdiqoujT8SxQkxsDocDrter8JWGLPqUdV0nxefzGS0513Ju8MulG+kpGvKjIorWWqHjXCkUOfcPAceUK9JvtVoJhf2+gdZaNBxWhqPQmlibEcJeprwlVJnnwVAUsTkao0W3MAxJ+P3kCv3aQ1duvdYGSZLIEHja3MimCRShVUqjbduXzAUhUTndaXmmxc4UH304m3B/r+u/AeinT13pG/0FAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;trigger-example&quot;
+        title=&quot;trigger-example&quot;
+        src=&quot;/static/4e5bd20781707a76b95f3734efdac631/69902/trigger-example.png&quot;
+        srcset=&quot;/static/4e5bd20781707a76b95f3734efdac631/772e8/trigger-example.png 200w,
+/static/4e5bd20781707a76b95f3734efdac631/e17e5/trigger-example.png 400w,
+/static/4e5bd20781707a76b95f3734efdac631/69902/trigger-example.png 520w&quot;
+        sizes=&quot;(max-width: 520px) 100vw, 520px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;As you can see a trigger has a name, a description and an amount of properties.&lt;/p&gt;
+&lt;p&gt;On the contrary an IFTTT-Action can be used to invoke something in its origin service. Actions are built with the same pattern as triggers like another example from the BMW Labs service:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 520px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6e5b71249e8a62a6577bf62aa26d923f/69902/action-example.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAA4mAAAN/wHwU+XzAAABnElEQVQoz5VS7W7aQBD0+z8Q+d00kZoAQUVF+Ntn47MBG0GTShXYvunsuUaQtBI5ebV359m92dl1uq77jX4Z3LiMMe/NDN4RwHz+3Tw8PGI2m+Hb0xPc5RKLxQJhGOKFd3ejEZ7HY3y9/4LxZIrTqfmQeCDkSNb1eg2llNlsNkjTFDrPUZYl6rqG1gWyLMWKd8RAF8WQ4Iq0fGeGVVVBkuYM2m63PG+RM9FqldFW2O/3FiMPylke0zpHQYzg5dw0PWuHGpJBhjiOLdjzfcvE8z24rgvfD2z5SqVIiJlOJhiz/Ih7kSQg/gf/x0mCpm37hCqJEQQhikIjiiJrUqbrerwPkFGGhAGyFx9FIQkk/Z5J690Ox+PRSmFLLknf83xSXxMUW5CwzbWGYjLFQGEnbOXhqqohRFoyak6nq/Fw/iHwuYMSNHgJHkzO/xsly3DHbiaJQs1mFOxiEEb4eTicgbfM4nAnGhrN0qgHx6e0XROBDxcJb7DrwaZepmBS6fTr69sFC3xm9YPdtt0v2VAbI7MkrRc/aHWjmb+++wNud5PRyW/jCAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;action-example&quot;
+        title=&quot;action-example&quot;
+        src=&quot;/static/6e5b71249e8a62a6577bf62aa26d923f/69902/action-example.png&quot;
+        srcset=&quot;/static/6e5b71249e8a62a6577bf62aa26d923f/772e8/action-example.png 200w,
+/static/6e5b71249e8a62a6577bf62aa26d923f/e17e5/action-example.png 400w,
+/static/6e5b71249e8a62a6577bf62aa26d923f/69902/action-example.png 520w&quot;
+        sizes=&quot;(max-width: 520px) 100vw, 520px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Finally one can combine a trigger with an action from any service, which is then called an IFTTT-Applet. Applets can be shared and discovered on &lt;a href=&quot;http://www.ifttt.com/discover&quot;&gt;IFTTT.com&lt;/a&gt; in the discover section. An excerpt:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/95b6a0fb19308c958afddb3de686c6cb/c3fd4/applet-example-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 34%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAA4mAAAN/wHwU+XzAAAB3UlEQVQozy2R22oaURSGN2q9C0ObCwkKzjg64mHMjOOYoI2nBmJMtVEQFWszQig95AEa9JFq74oP0EfIQCletiG97GWb6d5/19hcLPaGtfj4DwwHBwBjQjAGzhinP36GQp/t4+ObTrsNwzC4ZVmg8crlMqyi+VHRMt+U7D4UWeayLENRFEGDZDL5m4nJRPgQEQqBB4Nb4C1j68rpqTscDFAsFjmND/Zs24Zhmp9y6dQmt59HQk3ydFrzQZDj8S2UoVSCsG0hKlXwSoVj9wnugsF1tXPmvr68xHw+561WE/V63atWq8hms6tarbYZj0bodnt8OByi3x8If0dqBROOA7zoAaSG98859vbwIxxedyYTd3F9jcViwT/Qu1wuvXO6S6W0FcE376+ucPHqgr97+waz2QyNRgOqmiCFOzu4lx5DPAr7WW4t35Hlp2fPXWf2EqPxmDvOHNPp1Ov1uigUCitVVTcFXUc+r/N0VqcMZcRiMSQSBPwrSfi1G8EfAt0/AG8DgXXm8NB91myi1WxuS/EzfMhyCyyaJkyrxFM5A/F43C/Gtwz2NRKBS5CbQACuJPHvtPwSiawzluXWjo6gaRrXSQ0V4rVPTijy0n8gwaPRKI9Fo36upFwnyyr+AThi9hTurEWhAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;applet-example-2.png&quot;
+        title=&quot;applet-example-2.png&quot;
+        src=&quot;/static/95b6a0fb19308c958afddb3de686c6cb/5a190/applet-example-2.png&quot;
+        srcset=&quot;/static/95b6a0fb19308c958afddb3de686c6cb/772e8/applet-example-2.png 200w,
+/static/95b6a0fb19308c958afddb3de686c6cb/e17e5/applet-example-2.png 400w,
+/static/95b6a0fb19308c958afddb3de686c6cb/5a190/applet-example-2.png 800w,
+/static/95b6a0fb19308c958afddb3de686c6cb/c3fd4/applet-example-2.png 854w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;The implementation&lt;/h2&gt;
+&lt;p&gt;On the first day of the hackathon we used the available time to create an implementation plan broken down to small tasks. The remaining time until the presentation session on the fourth day, where all teams showcased their prototypes, consisted of coding, reading documentation and scratching our heads.&lt;/p&gt;
+&lt;p&gt;As integrating tapio into IFTTT &lt;a href=&quot;https://platform.ifttt.com/docs&quot;&gt;the official way&lt;/a&gt; would&apos;ve been a project on its own and required access to tapio internal structures we used an IFTTT-Service called &lt;a href=&quot;https://ifttt.com/maker_webhooks&quot;&gt;Webhooks&lt;/a&gt; instead.&lt;/p&gt;
+&lt;p&gt;There is no official specification on what exactly a Webhook is but it&apos;s generally accepted to think of a Webhook as an endpoint for a HTTP call which when called triggers something. The IFTTT Webhook service provides a trigger which can receive HTTP calls and an action which can send HTTP calls. Therefore it can be used as an interface to inject or receive any kinds of events.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/718c95ef9c12666722875e748432232d/d52e5/ifttt-webhook-service.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 33%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABLUlEQVQoz4VQ2U7DMBDMH/MPSO1/QHnkfygiRxM3bXzlPojT7LAJhZdyjDTelT0az66XdoB9B525Zj2gB3yBruRzfpA9rHSAYa0cPrUTbuFFWU5C5hC6RKwKCFXCWouiKKiqKmIsuidVtjbRFeKzoSDVCE4WUptVm+c5jDEYRwfvbf+CQxhSFPh4e90jCgP4vo9wuYsiGsdxMdxZrewpPaIqciqsQWE1mzDZcDHjzzHPM7w4jnHOMkqSBGF0gBACbAQpJVVlRddJdsMw2K7r0DQt4Q94PJrj2K5tW94QHP/iLpfL2jNHHnnm+qiUYlmOuq7JTROWVfxEr2nqdfZ/8HxKUyPEEZxyTXjd7W1C59x2mqYN9xtOt2Hhd2Vuub/nt7umabq+78Fa+i3dwg+9xxXt7lg7UAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ifttt-webhook-service&quot;
+        title=&quot;ifttt-webhook-service&quot;
+        src=&quot;/static/718c95ef9c12666722875e748432232d/5a190/ifttt-webhook-service.png&quot;
+        srcset=&quot;/static/718c95ef9c12666722875e748432232d/772e8/ifttt-webhook-service.png 200w,
+/static/718c95ef9c12666722875e748432232d/e17e5/ifttt-webhook-service.png 400w,
+/static/718c95ef9c12666722875e748432232d/5a190/ifttt-webhook-service.png 800w,
+/static/718c95ef9c12666722875e748432232d/d52e5/ifttt-webhook-service.png 848w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;So there were two event flows we had to implement: From tapio-ready machines to IFTTT and back:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/32c01e819306afe03211c2a0b80f6b17/a0730/tapio-ifttt-sequence-complete.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsSAAALEgHS3X78AAAB0UlEQVQozz2OXW/TMBSGnaaw/QAuAQntT8ImBIMpXZt+3nGFyoAhjT+AhMQ0qesA8aGyalkHq9K1U5smaZPaceLE9sFdBdKR/do6j54X+f3TYHQ26rVH1rf5dde5+OFaXz9aHx7bzU27WRvuV63ms4uXW1evGsN3xuVe50/Lu/w+/v1z2u+g0JsG7gTPpgTPCfYD3wFCX/hHd8Livai2gWsbUf0+rd9VmdQfBJXW7AwiQkiAQx9JxgEgpSxNGI/TwJtBDFXSRtmODhUEJpImgrIGZZW1rNhmV2qfSwFSIpGkIEEKqb7USTFZwv4RCp7eYqaaPC2irJQT5Rw39aTYprbaV7BcwixdYbC8ZBJTENCIv6zMiskvCjo28pmpZ2aelT4rOIxJuJAZX5mlFOKGlSxOgEMNHyP2XJEaL2lSFVb9yznln+8ckz5EWbTAkov/ZiGUnfO570Ekqs4hmj9ZXxTWyO5aat7O1JTXE1M927j/r7ZAnDKe8pQkMaYizmiAgUGFniC+rUMJiQLiBpIFTe4uc2a02GAJ37jQbNB17V+h0w0mvcC1vMFpPOkd2p+2xnsPx69r7kHVPdie7j9y3jS898b1287ghHq92fjcG3b/AtUco/hmlCgXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Sequence diagram&quot;
+        title=&quot;Sequence diagram&quot;
+        src=&quot;/static/32c01e819306afe03211c2a0b80f6b17/5a190/tapio-ifttt-sequence-complete.png&quot;
+        srcset=&quot;/static/32c01e819306afe03211c2a0b80f6b17/772e8/tapio-ifttt-sequence-complete.png 200w,
+/static/32c01e819306afe03211c2a0b80f6b17/e17e5/tapio-ifttt-sequence-complete.png 400w,
+/static/32c01e819306afe03211c2a0b80f6b17/5a190/tapio-ifttt-sequence-complete.png 800w,
+/static/32c01e819306afe03211c2a0b80f6b17/a0730/tapio-ifttt-sequence-complete.png 1131w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Building a demo machine&lt;/h3&gt;
+&lt;p&gt;In order to test the tapio-IFTTT-Connector as we were developing it and also to showcase our accomplishments later on we needed a test machine which&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;could run the tapio CloudConnector,&lt;/li&gt;
+&lt;li&gt;could run a OPC UA server,&lt;/li&gt;
+&lt;li&gt;has an input so that we could trigger events&lt;/li&gt;
+&lt;li&gt;and has an output so that it could process actions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The tapio CloudConnector is the piece of software from tapio which has to be installed on a machine so that it can connect to the tapio ecosystem. CloudConnector can speak a machine to machine communication protocol called &lt;a href=&quot;https://opcfoundation.org/about/opc-technologies/opc-ua/&quot;&gt;OPC UA&lt;/a&gt; which we can use to hook up input and output components with CloudConnector.&lt;/p&gt;
+&lt;p&gt;The first idea that came to mind was to use a &lt;a href=&quot;https://www.raspberrypi.org/&quot;&gt;Raspberry Pi&lt;/a&gt;. It&apos;s cheap, reliable and easy to set up. It also provides a GPIO-interface which can be used to connect any input or output component like a motion sensor as input and a RGB LED as output.&lt;/p&gt;
+&lt;p&gt;So we went ahead, got ourself a Pi, installed &lt;a href=&quot;https://www.raspberrypi.org/downloads/raspbian/&quot;&gt;Raspbian Lite&lt;/a&gt; and set up SSH access. Then we took a look at the &lt;a href=&quot;https://developer.tapio.one&quot;&gt;tapio developer portal&lt;/a&gt; to figure out how to install the tapio CloudConnector linux. When the CloudConnector was running on the Pi we then continued with setting up &lt;a href=&quot;https://www.hanselman.com/blog/RemoteDebuggingWithVSCodeOnWindowsToARaspberryPiUsingNETCoreOnARM.aspx&quot;&gt;remote debugging with Visual Studio Code&lt;/a&gt;. This way the implementation of the sensor-connecting OPC UA server was a lot easier.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a174ebe209d5ba06eb11b9884123158d/9ab20/demo_machine.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.49999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACn0lEQVQozxXPbUgTcQDH8XtfL1xDbg93u6fdbrvt7va/u+12Ob05p1su3XRuU7cpaxmiRr3Qok2XD/hAFBkmDCsEi4XvrOgBwupNBQX1IupFFKVJEfQifBO9a8H37YcfP+jvn4+/vr1593jr2UZle2PlxebK8+rFp+vle6tjqiKglJWgSQRHUcJixhHYDB+sO9CXyRSLkyajDnp1t/qwsrw5P3Xr3MkbE8PV6YmtpfMPlhceXZ0Z6u3xeL0IhuhNBhg1GVGjHtbDqOHEeL50ZsTBYNDt+fK1s6cWjqXGu1oGNZBtEIZbfFPd4Zl0Z2W0cKGQSLXxAdXO2i0GBNbV64Ak+EISyxhZ2ggtDfWXM7GU5gUMyTMkIC2pVn+6I5RPRNIdQc5OALc91CRWyoOdAY7lnIoq6/R1sOEQb0egqVy8lIlJvBO3kgxrx2ky0AhawupANp5MRp28w8HRLlG+fnlRU5jIkSBJY7X9WihSD83lu+by8ZAKSJrmeBfrdHButv2oxgksJ3GSF/gDHkkWFsdzw4UOTnAimImwYihmho310HQmOt0XTmgeirEJbp4TOCC5a0YNqIpfdnt5n1/uTYZGc2EXbycozGojSStGWXGKwqBST3MpETwe8deYKMsCEATAqT6f2qgqTV7gk5pblbGRlAJcGGmxMkTtndVGECSKEwhUvTR35XR+ZiCmKrKiqqIIRFmQfKKsSmKD7JIcnYkgULwWwlIztSgaIylLbfw//vplZ+fzpw+vX2b7+1hOED0enLa55QaOs7tdjkQy1a0dzkRUr+zACRSjCMJmw0jMjBoQ1AB93939sbe3/3u/enM93taUbtN6NC0Xy81mu9fmZ9++//nkzvb91eJaMTpZ0PIxENWcwIWzDjrTLv4D6Su92RWZAIMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Demo machine&quot;
+        title=&quot;Demo machine&quot;
+        src=&quot;/static/a174ebe209d5ba06eb11b9884123158d/5a190/demo_machine.png&quot;
+        srcset=&quot;/static/a174ebe209d5ba06eb11b9884123158d/772e8/demo_machine.png 200w,
+/static/a174ebe209d5ba06eb11b9884123158d/e17e5/demo_machine.png 400w,
+/static/a174ebe209d5ba06eb11b9884123158d/5a190/demo_machine.png 800w,
+/static/a174ebe209d5ba06eb11b9884123158d/c1b63/demo_machine.png 1200w,
+/static/a174ebe209d5ba06eb11b9884123158d/29007/demo_machine.png 1600w,
+/static/a174ebe209d5ba06eb11b9884123158d/9ab20/demo_machine.png 3681w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;With our demo machine up and running we started working on the implementation of the connector itself. Stay tuned for the &lt;a href=&quot;/blog/2019/connecting-the-digital-worlds-2&quot;&gt;next article&lt;/a&gt; in this series where we will share how we implemented the route for events from IFTTT to tapio-ready machines.&lt;/p&gt;</content:encoded></item></channel></rss>
