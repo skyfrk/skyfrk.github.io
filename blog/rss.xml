@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[esslinger.dev]]></title><description><![CDATA[The personal internet domicile of Simon Eßlinger]]></description><link>https://esslinger.dev</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 15 Apr 2020 21:59:20 GMT</lastBuildDate><item><title><![CDATA[hunger.stop()]]></title><description><![CDATA[Last weekend (14.-15.2.) I participated in hunger.stop() - the first hackathon of the Welthungerhilfe.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[esslinger.dev]]></title><description><![CDATA[The personal internet domicile of Simon Eßlinger]]></description><link>https://esslinger.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 10 May 2020 16:58:47 GMT</lastBuildDate><item><title><![CDATA[hunger.stop()]]></title><description><![CDATA[Last weekend (14.-15.2.) I participated in hunger.stop() - the first hackathon of the Welthungerhilfe.
 There were three challenges which the…]]></description><link>https://esslinger.dev/blog/2020/hunger-stop/</link><guid isPermaLink="false">https://esslinger.dev/blog/2020/hunger-stop/</guid><pubDate>Thu, 20 Feb 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Last weekend (14.-15.2.) I participated in &lt;a href=&quot;https://www.welthungerhilfe.de/hackathon/&quot;&gt;hunger.stop()&lt;/a&gt; - the first hackathon of the &lt;a href=&quot;https://www.welthungerhilfe.de/&quot;&gt;Welthungerhilfe&lt;/a&gt;.
 There were three challenges which the participants of the hackathon should develop solutions for:&lt;/p&gt;
 &lt;ol&gt;
@@ -15,7 +15,7 @@ There were three challenges which the participants of the hackathon should devel
 &lt;p&gt;The landing page explains the basic functionality to the user: The ability to discuss a preselected question with a randomly chosen anonymous person from the other end of the world.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 759px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 759px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -45,7 +45,7 @@ There were three challenges which the participants of the hackathon should devel
 &lt;p&gt;After clicking on the &lt;em&gt;lets go&lt;/em&gt; button the user gets to pick from a list of preselected questions.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 759px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 759px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -75,7 +75,7 @@ There were three challenges which the participants of the hackathon should devel
 &lt;p&gt;After answering the selected question the user gets a random user name and robot profile picture assigned and has to wait until another user is found who also answered the same question. If the user was matched with another user the can start discussing!&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 750px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 750px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -118,7 +118,7 @@ There were three challenges which the participants of the hackathon should devel
 &lt;/ul&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -251,7 +251,7 @@ There were three challenges which the participants of the hackathon should devel
 &lt;p&gt;Taking advantage of the body structure one could transmit any kind of event data to IFTTT. Finally we have to configure an applet in IFTTT to test our implementation. We combined &lt;a href=&quot;https://ifttt.com/services/google_sheets&quot;&gt;Google Sheets&lt;/a&gt; with the Webhook service for example:&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -290,7 +290,7 @@ There were three challenges which the participants of the hackathon should devel
 &lt;/ul&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -328,7 +328,7 @@ Authtoken saved to configuration file: C:\Users\Simon&lt;span class=&quot;token 
 &lt;p&gt;Now we&apos;re already able to expose a local port. In the example below we&apos;re exposing the local port our Azure Function is using:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:\Program Files\ngrok&gt; &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;ngrok http 1337&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;After running the above we&apos;re given a monitor screen in our terminal. Behind the &lt;code class=&quot;language-text&quot;&gt;Forwarding&lt;/code&gt; keyword we can see active tunnels. In our example below our local Azure Function is now exposed behind &lt;code class=&quot;language-text&quot;&gt;http://qyt7q40w03.ngrok.io&lt;/code&gt;. We can verify if everything is working correctly by opening the ngrok URL in our web browser (sending a GET request). As we can see at the bottom of the output a GET request was logged as expected. It works! If you&apos;d like to have a deeper look in incoming requests you can explore ngroks web interface running locally on port &lt;code class=&quot;language-text&quot;&gt;4040&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;ngrok by @inconshreveable                               &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Ctrl+C to quit&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;command-line-prompt&quot;&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;span data-user=user data-host=machine&gt;&lt;/span&gt;&lt;/span&gt;ngrok by @inconshreveable                               &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Ctrl+C to quit&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
 Session Status      online
 Account             &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Plan: Free&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
@@ -348,7 +348,7 @@ GET /WebhookProcessorFunction               &lt;span class=&quot;token number&qu
 &lt;p&gt;To actually develop and debug with real HTTP requests from IFTTT we have to create an applet with a trigger under our control and an action which sends HTTP requests to our local Azure Function exposed through ngrok. Therefore we create an applet which sends a POST request into our ngrok tunnel when we press a button on our smartphone:&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -567,7 +567,7 @@ GET /WebhookProcessorFunction               &lt;span class=&quot;token number&qu
 &lt;p&gt;An IFTTT-Trigger can be used to listen for an event to occur in its origin service. For example the BMW Labs service provides among others following trigger:&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 520px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 520px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -598,7 +598,7 @@ GET /WebhookProcessorFunction               &lt;span class=&quot;token number&qu
 &lt;p&gt;On the contrary an IFTTT-Action can be used to invoke something in its origin service. Actions are built with the same pattern as triggers like another example from the BMW Labs service:&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 520px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 520px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -628,7 +628,7 @@ GET /WebhookProcessorFunction               &lt;span class=&quot;token number&qu
 &lt;p&gt;Finally one can combine a trigger with an action from any service, which is then called an IFTTT-Applet. Applets can be shared and discovered on &lt;a href=&quot;http://www.ifttt.com/discover&quot;&gt;IFTTT.com&lt;/a&gt; in the discover section. An excerpt:&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -662,7 +662,7 @@ GET /WebhookProcessorFunction               &lt;span class=&quot;token number&qu
 &lt;p&gt;There is no official specification on what exactly a Webhook is but it&apos;s generally accepted to think of a Webhook as an endpoint for a HTTP call which when called triggers something. The IFTTT Webhook service provides a trigger which can receive HTTP calls and an action which can send HTTP calls. Therefore it can be used as an interface to inject or receive any kinds of events.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -693,7 +693,7 @@ GET /WebhookProcessorFunction               &lt;span class=&quot;token number&qu
 &lt;p&gt;So there were two event flows we had to implement: From tapio-ready machines to IFTTT and back:&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -734,7 +734,7 @@ GET /WebhookProcessorFunction               &lt;span class=&quot;token number&qu
 &lt;p&gt;So we went ahead, got ourself a Pi, installed &lt;a href=&quot;https://www.raspberrypi.org/downloads/raspbian/&quot;&gt;Raspbian Lite&lt;/a&gt; and set up SSH access. Then we took a look at the &lt;a href=&quot;https://developer.tapio.one&quot;&gt;tapio developer portal&lt;/a&gt; to figure out how to install the tapio CloudConnector linux. When the CloudConnector was running on the Pi we then continued with setting up &lt;a href=&quot;https://www.hanselman.com/blog/RemoteDebuggingWithVSCodeOnWindowsToARaspberryPiUsingNETCoreOnARM.aspx&quot;&gt;remote debugging with Visual Studio Code&lt;/a&gt;. This way the implementation of the sensor-connecting OPC UA server was a lot easier.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
